@@ -78,11 +78,3 @@
     > http://localhost:3000/coins/BTC-BRL/candles
 
 ---
-
-## Pendencies:
-
-  - [x] Sort table in descending order;
-  - [x] Implement chart with latest quotes;
-  - [x] Change Logo;
-  - [x] Implement docker;
-  - [ ] Change chart color;
