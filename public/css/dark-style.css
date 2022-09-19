@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family :'Roboto', sans-serif;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+:root{
+  --white: #fff;
+  --grey:rgba(244,244,245,.9);
+  --dark3:  #17193b;
+  --dark4:  rgba(0,0,0,.24);
+}
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.7px;
+}
+body {
+  background: radial-gradient(farthest-side ellipse at 10% 0,#333867 20%,#17193b);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--grey);
+}
+
+/* geral */
+h1, h2{
+  font-weight: 300;
+}
+h1, h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1, h2{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* geral */
+.container{
+  position: relative;
+  width: 100%;
+}
+/* main */
+.main{
+  position: absolute;
+  width: 100% ;
+  min-height: 100vh;
+}
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.logo{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #e49400;
+}
+
+.topbar .logo img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 50%!important;
+  border: 2px solid #fff;
+  border: 1px solid #ddd;
+  padding: 1px;
+  background: white;
+}
+
+.headerTitle{
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  display:flex;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 1.9em;
+  color:var(--grey);
+}
+
+/* cards */
+.cardBox{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 30px;
+}
+
+/* Detalhes */
+.details{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+}
+.details .recentOrders{
+  position: relative;
+  display: flex;
+  background: var(--dark4);
+  padding: 20px;
+  box-shadow: 0 25px 20px -20px rgb(0 0 0 / 10%), 0 0 15px rgb(0 0 0 / 6%);
+  border-radius: 20px;
+  flex-direction: column;
+
+}
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card-header h2{
+  font-weight: 600;
+  color: rgba(244,244,245,.9);
+}
+.card-body{
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.details table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.details table thead td{
+  font-weight: 600;
+}
+.details .recentOrders table thead {
+  color:rgba(244,244,245,.9);
+  background-color: rgba(0,0,0,.24);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.details .recentOrders table tr:last-child{
+  border-bottom: none;
+}
+.details .recentOrders table tbody tr:hover{
+  background: var(--dark3);
+  background: rgba(0,0,0,.20);
+  color: var(--white);
+}
+.details .recentOrders table tr td{
+  font-size: 14px;
+  padding: 10px;
+}
+.details .recentOrders table tr td:nth-child(3),
+.details .recentOrders table tr td:nth-child(4){
+  text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2),
+.details .recentOrders table tr td:nth-child(5){
+  text-align: center;
+}
+.status{
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.buyStatus{
+  background: #8de02c;
+  color: var(--white);
+}
+.status.sellStatus{
+  background: #f00;
+  color: var(--white);
+}
+
+.chart-bitcoin{
+  width:100%;
+  display: block;
+  height: 100%;
+  min-height: 280px;
+}
+
+/* card 2 */
+
+.card2{
+  position: relative;
+  background: var(--dark4);
+  padding: 20px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+.card2 .card2-header{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.25rem 0.25rem;
+}
+.card2 .card2-header .card2-header-icon {
+  display: flex;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+
+}
+.card2 .card2-header .card2-header-icon img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 50%!important;
+  border: 2px solid #fff;
+  border: 1px solid #ddd;
+  padding: 1px;
+  background: white;
+}
+
+.card2 .card2-header .card2-header-detail {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+}
+.card2 .card2-header .card2-header-detail .card2-header-detail-title {
+  font-weight: bolder;
+  font-size: 1.9em;
+  color: #db2a34!important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.0;
+  padding: 0;
+}
+.card2 .card2-header .card2-header-detail .card2-header-detail-subtitle {
+  color: var(--black2);
+  font-size: 0.7em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 1.0;
+  text-transform: uppercase;
+}
+.card2 .card2-body{
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0.25rem;
+  align-items: flex-start;
+}
+.card2 .card2-body .card2-body-value{
+  font-weight: bolder;
+  /* color: #db2a34!important; */
+  color: #ddd!important;
+  font-size: 2.2em;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.0;
+  padding-left: 10px;
+}
+.cardBox .card2:hover{
+  background: var(--dark3);
+}
+.cardBox .card2:hover .card2-body-details,
+.cardBox .card2:hover .card2-body-value,
+.cardBox .card2:hover .card2-header-detail-subtitle,
+.cardBox .card2:hover .card2-header-detail-title,
+.cardBox .card2:hover .card2-header-icon{
+  color: var(--white);
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,.80) #686972;;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #686972;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.80);
+  border-radius: 20px;
+  border: 3px solid #686972;
+}
+
+/* responsive design */
+@media (max-width: 991px) {
+  .cardBox{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .details{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .recentOrders{
+    overflow-x: auto;
+  }
+}
+@media (max-width: 480px) {
+  .cardBox{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .details{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader h2{
+    font-size: 20px;
+  }
+}
+

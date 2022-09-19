@@ -1,0 +1,14 @@
+version: '3'
+services:
+  cripto-dashboard:
+    container_name: cripto-dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cripto-dashboard-app
+    restart: on-failure
+    ports:
+      - 8080:3000
+    environment:
+      PORT: 3000
+
